@@ -5,16 +5,31 @@ import TheWelcome from './components/TheWelcome.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <nav>
+        <div>
+            uplift
+        </div>
+        <div>
+            FAQ?
+        </div>
+        <div >
+            About
+        </div>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    </nav>
   </header>
 
   <main>
-    <TheWelcome />
-  </main>
+    <div>
+        <input
+            :value="text"
+            @input="event => text = event.target.value" />
+            <v-btn> submite </v-btn >
+    </div>
+    <div> FAQ </div>
+    <div> About </div>
+    </main>
+
 </template>
 
 <style scoped>
